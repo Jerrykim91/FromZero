@@ -22,9 +22,8 @@
 <br>
 <br>
 
-##  이슈 
 
-### 이슈 1 : 모델 설계 
+## 이슈 1 : 모델 설계 
 
 <br>
 
@@ -42,13 +41,149 @@
 <br>
 
 
-### 이슈 2 : 시스템서버 설계
+## 이슈 2 : 시스템서버 설계
 
 <br>
 
-이제 시작해야하는데 아직 전체적으로 진행이 느려서... 
-일단 서버는 열었고 기능들이 구현이 필요할것 같다. 
+### 구조
+
+- member
+    - 회원 관리 시스템 
+- service
+    - 이미지 분석
+    - 텍스트 분석
+
+<br>
+
+### 데이터 베이스 
+
+- mongoDB 사용 
+
+<br>
+
+### 아웃라인 
+
+- 본래 우리가 이미지를 인식해서 정답 데이터를 던져주면 
+    텍스트 팀이 데이터를 받아서 해당 서비스를 제공  
+
+- 산출물 : Web app
 
 <br>
 <br>
+
+## 전체적인 구조 
+
+```bash
+
+deploy 
+
+    └ deploy -> setting check
+
+    └ member 
+        └ views 
+            └ main 
+            └ sign_up 
+                - 회원 가입
+            └ sign_in
+                - 로그인 
+            └ (change_info : 사용자 정보수정)
+
+    └ service
+        └ views 
+            └ food_img 
+            └ text   
+
+    └ static
+        └ js  : 미정
+        └ css : 미정
+
+    └ templates
+
+        └ member 
+            └ main page : before login / after login
+                - 첫화면 
+                    - 리콰이얼 멤버 -> 다르게 show
+
+            └ sign_up page
+                - 성공 -> login page
+                - ( 실패-> 팝업창 + 로그인 페이지 )
+
+            └ sign_in page
+                - 성공 -> main
+                - 실패 -> 실패 팝업창 + 로그인 페이지2( 회원가입 권유, 계정찾기)
+            └ (change_info : 옵션)
+
+        └ service
+            └ base : after login
+                - 로그인 한사람만 이페이지를 리턴 받는다.
+                - 이미지 인식을 위한 버튼 클릭 
+
+            └ retrun_info
+                - 인식된 이미지 정보를 보여줌 
+                - 추천 관련 서비스 제공 
+      
+```
+
+<br>
+<br>
+
+## 세부 구조
+
+### member : 회원 관리 시스템
+---
+
+```py 
+
+def sign_up():
+    '''
+    회원가입
+    '''
+    pass
+
+
+def sign_in():
+    '''
+    로그인
+    '''
+    pass
+
+ 
+def main():
+    '''
+    메인(로그인전)
+    '''
+    pass
+
+
+```
+<br>
+
+### service 
+---
+
+```py
+
+def text(food_name):
+    """
+    food_img에서 던져 주는 값을 제대로 아웃풋을 낼것
+    """
+
+    return meau
+
+# 임시 방편 
+img = '이미지'
+def food_img(img):
+    """
+    당장은 test임
+    """ 
+    # 우리가 가진 데이터 리스트를 
+    # 기반으로 이미지 랜덤 코드를 짜서 전달
+
+    return food_name
+
+```
+
+<br>
+<br>
+
 
