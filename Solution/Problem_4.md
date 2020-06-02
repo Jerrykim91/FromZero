@@ -156,6 +156,8 @@ def main():
 
 # def change_info():pass
 
+# 코드가 추가 퇼 수 있음 -> 핵심 기능일뿐 오해하지 말자 
+
 ```
 <br>
 
@@ -166,7 +168,7 @@ def main():
 
 def text(food_name):
     """
-    food_img에서 던져 주는 값을 제대로 아웃풋을 낼것
+    food_img에서 던져 주는 값을 제대로 아웃풋을 낼 것
     """
 
     return meau
@@ -187,6 +189,9 @@ def take_pic(click):
     이미지 촬영 코드 
     """ 
     return img
+
+# 코드가 추가 퇼 수 있음 -> 핵심 기능일뿐 오해하지 말자 
+
 ```
 
 <br>
