@@ -154,6 +154,7 @@ def main():
     '''
     pass
 
+# def change_info():pass
 
 ```
 <br>
@@ -181,6 +182,11 @@ def food_img(img):
 
     return food_name
 
+def take_pic(click):
+    """
+    이미지 촬영 코드 
+    """ 
+    return img
 ```
 
 <br>
