@@ -80,7 +80,7 @@ deploy
     └ deploy -> setting check
 
     └ member 
-        └ views 
+        └ views(함수)
             └ main 
             └ sign_up 
                 - 회원 가입
@@ -89,9 +89,10 @@ deploy
             └ (change_info : 사용자 정보수정)
 
     └ service
-        └ views 
+        └ views (함수)
             └ food_img 
-            └ text   
+            └ text 
+            └ take_pic  
 
     └ static
         └ js  : 미정
@@ -100,28 +101,27 @@ deploy
     └ templates
 
         └ member 
-            └ main page : before login / after login
+            └ main.html : before login / after login
                 - 첫화면 
                     - 리콰이얼 멤버 -> 다르게 show
 
-            └ sign_up page
+            └ sign_up.html 
                 - 성공 -> login page
                 - ( 실패-> 팝업창 + 로그인 페이지 )
 
-            └ sign_in page
+            └ sign_in.html 
                 - 성공 -> main
                 - 실패 -> 실패 팝업창 + 로그인 페이지2( 회원가입 권유, 계정찾기)
             └ (change_info : 옵션)
 
         └ service
-            └ base : after login
+            └ base.html : after login
                 - 로그인 한사람만 이페이지를 리턴 받는다.
                 - 이미지 인식을 위한 버튼 클릭 
 
-            └ retrun_info
+            └ retrun_info.html
                 - 인식된 이미지 정보를 보여줌 
                 - 추천 관련 서비스 제공 
-      
 ```
 
 <br>
@@ -174,7 +174,7 @@ def text(food_name):
     return meau
 
 # 임시 방편 
-img = '이미지'
+# img = '이미지'
 def food_img(img):
     """
     당장은 test임
