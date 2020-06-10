@@ -27,6 +27,8 @@
 	- Various categories Image classification
 		-  약 150종 
 	-  Model based in CNN
+
+	
 <br>
 <br>
 
