@@ -22,10 +22,9 @@ import scipy as sp
 from numpy.random import rand
 pd.options.display.max_colwidth = 600
 
-# import cnn_utils as utils
-
 import matplotlib.pyplot as plt
 %matplotlib inline
+# 그래프 파라미터 설정
 params = {'legend.fontsize': 'x-large',
           'figure.figsize': (15, 5),
           'axes.labelsize': 'x-large',
@@ -37,30 +36,32 @@ plt.rcParams.update(params)
 
 from IPython.display import display, HTML
 import warnings
-warnings.filterwarnings('ignore')
+warnings.filterwarnings('ignore') # 워닝무시
 
 ## sklearn
 from sklearn import preprocessing
 from sklearn.metrics import roc_curve, auc, precision_recall_curve
 from sklearn.model_selection import train_test_split
 
-## 딥러닝
 
+## 딥러닝
 import tensorflow as tf
 # 전처리 
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 # 아키텍쳐 - VGG16
 from tensorflow.keras.applications import vgg16 as vgg
-
+# 아키텍쳐 - 기본 요소 
 from tensorflow.keras import optimizers,Model
 from tensorflow.keras.layers import Dropout, Flatten, Dense, GlobalAveragePooling2D,BatchNormalization
 from tensorflow.python.keras.utils import np_utils
 
-# 콜백 
+# 콜백 함수
 from tensorflow.keras import callbacks
 from tensorflow.keras.callbacks import ReduceLROnPlateau, ModelCheckpoint, EarlyStopping
 
 ```
+<br>
+
 
 ## 준비 과정 
 ---
@@ -68,14 +69,13 @@ from tensorflow.keras.callbacks import ReduceLROnPlateau, ModelCheckpoint, Early
 
 
 ```py
-# 배치 사이즈 
-BATCH_SIZE = 64
-# 에포크 
-EPOCHS = 100
-# 학습할 카테고리 수 
-NUM_CLASSES = 4
-LEARNING_RATE = 1e-4
+
+BATCH_SIZE = 64        # 배치 사이즈 
+EPOCHS = 100           # 에포크 
+NUM_CLASSES = 4        # 학습할 카테고리 수 
+LEARNING_RATE = 1e-4   # 러닝 레이트
 MOMENTUM = 0.9
+
 # 데이터 위치 경로 
 PATH="C:\FoodClassification\data"
 
@@ -91,12 +91,16 @@ base_model = vgg.VGG16(weights='imagenet',
 last = base_model.get_layer('block3_pool').output
 
 ```
+<br>
 
 ## 모델 중비 
+---
 
 - 최상위층 없이 VGG16 로딩 
 - 커스텀 분류기 준비 
 - 모델의 맨위에 새로운 층 쌓기 -> ???? 
+
+<br>
 
 ```py
 
@@ -120,12 +124,15 @@ model = Model(base_model.input, pred)
 model.summary()
 
 ```
+<br>
 
 ## 체크포인트 생성 
+---
 
-콜백기능을 이용해서 손실값이 좋아질때마다 학습된 모델을 저장한다.  
-`verbose = 1`를 이용하면 자동으로 메세지를 확인 할 수 있다. 
+콜백기능을 이용해서 손실값이 좋아질때 마다 학습된 모델을 저장한다.  
+`verbose = 1` 를 이용하면 자동으로 메세지를 확인 할 수 있다. 
 
+<br>
 
 ```py
 
@@ -136,7 +143,7 @@ checkpoint = keras.callbacks.ModelCheckpoint('model_cnn3-{epoch:03d}-{acc:03f}-{
 # 기능 
 
 ```
-
+<br>
 
 ```py
 
