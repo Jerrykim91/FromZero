@@ -1,3 +1,113 @@
+
+
+
+def Closr(tag):  
+    tag = tag  
+
+    def Func(input):  
+        txt = input  
+        print(f'<{tag}>{txt}<{tag}>')
+
+    return Func  
+
+h1Func = Closr('h1')  
+pFunc  = Closr('p')  
+
+h1Func('h1태그의 내부')  
+pFunc('p태그의 내부')  
+
+
+
+
+
+
+############################################################
+
+# def Closr(tag):  
+#     txt = '안녕하세요'  
+#     tag = tag  
+
+#     def Func():  
+#         print(f'<{tag}>{txt}<{tag}>')
+
+#     return Func  
+
+# h1Func = Closr('h1')  
+# pFunc  = Closr('p')  
+
+# h1Func() 
+# pFunc()  
+
+############################################################
+
+# def Func():
+#     Code = 'Func의 test'
+
+#     def FuncInFunc():
+#         print(Code)
+        
+#     return FuncInFunc
+
+# MyFunc = Func()
+
+# d = [dir(MyFunc),
+#     type(MyFunc.__closure__),
+#     MyFunc.__closure__, 
+#     MyFunc.__closure__[0],
+#     dir(MyFunc.__closure__[0]),
+#     MyFunc.__closure__[0].cell_contents
+#     ]
+
+# for i in d :
+#     print(i)
+#     print('='*50)
+
+############################################################
+
+# def outer_func(): #1
+#     message = 'Hi' #3
+
+#     def inner_func(): #4
+#         print(message) #6
+
+#     return inner_func #5
+
+# my_func = outer_func() #2
+
+# print(my_func)
+
+############################################################
+
+# 연습 문제 
+
+# def cnt():
+#     i = 0 
+#     def count(x):
+#         nonlocal i
+#         i = i + 1
+#         print(i)
+#     return count
+
+# c = cnt()
+# for i in range(10):
+#     c(i)
+
+# print('='*50)
+
+# def cnt_an():
+#     i = 0 
+#     def count_an(x):
+#         nonlocal i
+#         i += 1
+#         return i 
+#     return count_an
+
+# my_fnc = cnt_an()
+# for k in range(10):
+#     print(my_fnc(k), end= ' ')
+
+############################################################
+
 # def calc():
 #     a = 3
 #     b = 5
@@ -15,29 +125,29 @@
 
 ############################################################
 
-def closr():                
-    i = 10
-    j = 10
-    tal = 0
+# def closr():                
+#     i = 10
+#     j = 10
+#     tal = 0
 
-    def mul(x):   
-        nonlocal tal
-        tal = tal + i * x + j       
-        print(tal)  
-    return mul
+#     def mul(x):   
+#         nonlocal tal
+#         tal = tal + i * x + j       
+#         print(tal)  
+#     return mul
 
-y = closr() 
-# print(y(1))
-# print(y(1),y(2),y(3))
-y(1)
-y(2)
-y(3)
+# y = closr() 
+# # print(y(1))
+# # print(y(1),y(2),y(3))
+# y(1)
+# y(2)
+# y(3)
 
-# Output
-# >>> 20
-# >>> 50
-# >>> 90
-# >>> None None None
+# # Output
+# # >>> 20
+# # >>> 50
+# # >>> 90
+# # >>> None None None
 
 ############################################################
 

@@ -1,12 +1,11 @@
 
-  
+<br>
 
 # KISS
 
 어디 한번 해보자
 
 
-  
 <br>
 <br>  
 
@@ -27,3 +26,6 @@
 
 ## Keep It Simple! Stupid! 
 - 간단하게! 멍청아!
+
+<br>
+<br>
