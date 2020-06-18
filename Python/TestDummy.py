@@ -2,9 +2,9 @@
 
 
 def factorial(n):
-    if n == 1:      
-        return 1    # 1을 반환하고 재귀호출을 종료
-    return n * factorial(n - 1)    # n *  n - 1을 넣어서 반환된 값을 곱함
+    if n == 0:      
+        return  0   
+    return n * factorial(n - 1)    
  
 print(factorial(5))
 
