@@ -1,25 +1,45 @@
 
 
 
-def Closr(tag):  
-    tag = tag  
-
-    def Func(input):  
-        txt = input  
-        print(f'<{tag}>{txt}<{tag}>')
-
-    return Func  
-
-h1Func = Closr('h1')  
-pFunc  = Closr('p')  
-
-h1Func('h1태그의 내부')  
-pFunc('p태그의 내부')  
+def factorial(n):
+    if n == 1:      
+        return 1    # 1을 반환하고 재귀호출을 종료
+    return n * factorial(n - 1)    # n *  n - 1을 넣어서 반환된 값을 곱함
+ 
+print(factorial(5))
 
 
+############################################################
+
+# def Func(cnt):
+#     if cnt == 0:  # 종료 조건을 만듦. 
+#                     # cnt가 0이면 다시 Func 함수를 호출하지 않고 끝냄
+#         return
+    
+#     print('Hello, world!', cnt)
+    
+#     cnt -= 1        # cnt를 1 감소시킨 뒤
+#     Func(cnt)       # 다시 Func에 넣음
+ 
+# Func(5)             # Func 함수 호출
 
 
+############################################################
 
+# def Closr(tag):  
+#     tag = tag  
+
+#     def Func(input):  
+#         txt = input  
+#         print(f'<{tag}>{txt}<{tag}>')
+
+#     return Func  
+
+# h1Func = Closr('h1')  
+# pFunc  = Closr('p')  
+
+# h1Func('h1태그의 내부')  
+# pFunc('p태그의 내부')  
 
 ############################################################
 
