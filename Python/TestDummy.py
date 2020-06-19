@@ -1,18 +1,51 @@
 
+############################################################
 
+# class Person:
+#     """
+#     매개변수 : self, 이름, 나이, 주소 
+#     """
+
+#     def __init__(self, name, age, address):
+#         self.hello   = '안녕!'
+#         self.name    = name
+#         self.age     = age
+#         self.address = address
+
+#     def Greeting(self):
+#         # print('{0} 나는 {1}야!'.format(self.hello, self.name))
+#         print(f'{self.hello} 나는 {self.name}야!')
+
+# Joy = Person('조이', 30, '인천' )
+# Joy.Greeting()
+
+# print('이름:', Joy.name)       
+# print('나이:', Joy.age)        
+# print('주소:', Joy.address)    
 
 ############################################################
 
-class Person:
-    def greeting(self): # 메소드(Method)
-        print('Hello')
+# class Person:
+#     def greeting(self): # 메소드(Method)
+#         print('Hello')
 
-Jerry = Person()  # 인스턴스(instance)
-Jerry.greeting()
+# Jerry = Person()  # 인스턴스(instance)
+# Jerry.greeting()
 
 ############################################################
 
 # 클래스
+
+############################################################
+
+# def Factorial(n):
+#     if not isinstance(n, int) or n < 0:    # n이 정수가 아니거나 음수이면 함수를 끝냄
+#         return None
+#     if n == 1:
+#         return 1
+#     return n * Factorial(n - 1)
+
+# print(Factorial(3))
 
 ############################################################
 
