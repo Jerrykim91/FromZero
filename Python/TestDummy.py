@@ -1,12 +1,27 @@
 
 
 
-def factorial(n):
-    if n == 0:      
-        return  0   
-    return n * factorial(n - 1)    
+############################################################
+
+class Person:
+    def greeting(self): # 메소드(Method)
+        print('Hello')
+
+Jerry = Person()  # 인스턴스(instance)
+Jerry.greeting()
+
+############################################################
+
+# 클래스
+
+############################################################
+
+# def factorial(n):
+#     if n == 0:      
+#         return  0   
+#     return n * factorial(n - 1)    
  
-print(factorial(5))
+# print(factorial(5))
 
 
 ############################################################
