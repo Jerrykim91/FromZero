@@ -1,18 +1,121 @@
 
+
+
+
+############################################################
+
+# 32
+
+
+
+
+############################################################
+
+# 31
+
+
+
+
+
+############################################################
+
+# 30
+
+
+
+
+
+############################################################
+
+# 29
+
+
+
+
+
+
+
+
+############################################################
+
+# 28
+
+# class Mall:
+#     """
+#     wMart와 eMart 중 어디가 더 저렴할까 ?
+#     """
+
+#     @staticmethod
+#     def wMart(a, b):
+#         print(f'$ {int((a + b)*0.8)}')
+ 
+#     @staticmethod
+#     def eMart(a, b):
+#         print(f'$ {a + b}')
+
+# apple = 10 
+# soup = 20
+
+# Mall.wMart(apple, soup)    
+# Mall.eMart(apple, soup)    # 클래스 -> 바로 메서드 호출
+
 ############################################################
 
 # 27
 
+# class creditCard:
+#     """
+#     1만불 한도의 신용카드 
+#     """
+#     __money_limit = 10000    # 비공개 클래스 속성
+ 
+#     def  show_money_limit(self):
+#         print(creditCard.__money_limit)    # 내부 접근
+ 
+ 
+# amax = creditCard()
+# amax.show_money_limit()    # 1만불
+ 
+# print(creditCard.__money_limit)    # 외부 접근 불가
 
 ############################################################
 
 # 26
+# class Person :
+#     # bag = [] 
+#     def __init__(self):
+#         self.bag = []
 
+#     def putBag(self, stuff):
+#         self.bag.append(stuff)
+
+# Jerry = Person()
+# Jerry.putBag('Books')
+
+# Joy = Person()
+# Joy.putBag('wallet')
+
+# print(Jerry.bag) # 제리의 가방
+# print(Joy.bag)   # 조이의 가방 
 
 ############################################################
 
 # 25
 
+# class Person :
+#     bag = [] 
+
+#     def putBag(self, stuff):
+#         self.bag.append(stuff)
+
+# Jerry = Person()
+# Jerry.putBag('Books')
+
+# Joy = Person()
+# Joy.putBag('wallet')
+
+# print(Jerry.bag) # 제리의 가방
+# print(Joy.bag)   # 조이의 가방 
 
 ############################################################
 
