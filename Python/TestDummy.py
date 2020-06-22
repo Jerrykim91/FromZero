@@ -2,39 +2,121 @@
 
 
 
+
+############################################################
+
+# 36
+
+
+
+############################################################
+
+# 35
+
+
+
+############################################################
+
+# 34
+
+
+
+############################################################
+
+# 33
+
+
+
 ############################################################
 
 # 32
 
+class Person:
+
+    def greeting(self):
+        print('안녕하세요!')
+ 
+class Doctor(Person):
+
+    def greeting(self):
+        print('안녕하세요 어디가 아프신가요?')
 
 
+Joy = Doctor()
+Joy.greeting()      
 
 ############################################################
 
 # 31
 
+# class Person:
+
+#     def __init__(self):
+#         print('부모 - 생성자')
+#         self.hello = '안녕하세요!'
+ 
+# class Doctor(Person):
+
+#     def __init__(self):
+#         print('자식 - 생성자')
+#         super().__init__()              # super()로 부모 __init__  호출
+#         self.hospital = 'Severance!'
 
 
-
+# Joy = Doctor()
+# print(Joy.hello)  
+# print(Joy.hospital)  
 
 ############################################################
 
-# 30
+# 30 - 미완
+
+# class Person:
+
+#     def greeting(self):
+#         print('안녕하세요!')
+ 
+# class PatientChart(Person):
+#     """
+#     Person을 상속 받음
+#     """
+#     def __init__(self):
+
+#         self.patient_chart = []  # Person 인스턴스를 담을 그릇
+
+#     def appendPatient(self, preson):
+
+#         self.patient_chart.append(preson)
+#         return self.patient_chart
+        
 
 
-
-
+# Joy = PatientChart()
+# Joy.greeting()     
+# Joy.appendPatient('k')
+# # print(Joy())
+# print(Joy)  
 
 ############################################################
 
 # 29
 
+# class Person:
+
+#     def greeting(self):
+#         print('안녕하세요!')
+ 
+# class Doctor(Person):
+#     """
+#     Person을 상속 받음
+#     """
+#     def checkUp(self):
+#         print('어디가 아프신가요?')
 
 
-
-
-
-
+# Joy = Doctor()
+# Joy.greeting()     
+# Joy.checkUp()       
 
 ############################################################
 
