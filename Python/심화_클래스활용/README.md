@@ -10,7 +10,7 @@
 
 <br>
 
-## Advanced_OOP_07
+## Advanced_OOP_객체합성
 
  - 출처 : [초보몽키의 개발공부로그 LINK](https://wayhome25.github.io/cs/2017/04/09/cs-09/)
 
@@ -18,9 +18,16 @@
 <br>
 
 
-## Advanced_OOP_08
+## Advanced_OOP_Super
 
- - 출처 : [개발자의 취미 생활 LINK](https://rednooby.tistory.com/55?category=633023)
+ - 출처 : [개발자의 취미 생활 LINK](https://rednooby.tistory.com/56?category=633023)
+
+
+<br>
+
+## Advanced_OOP_다중상속
+
+ - 출처 : [뚱땡이 우주인 LINK](https://uzooin.tistory.com/137)
 
 
 <br>

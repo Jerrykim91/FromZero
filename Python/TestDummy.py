@@ -31,19 +31,40 @@
 
 # 32
 
-class Person:
+class Father:
+    
+    def __init__(self):
+        self.fname = '김우빈'
+
+    def fatherName(self):
+        print(f'아빠는 {self.fname} ,')
+
+class Mather:
+
+    def __init__(self):
+        self.mname = '신민아'
+
+    def matherName(self):
+        print(f'엄마는 {self.mname} ,')
+
+class Child(Father,Mather):
+
+    def __init__(self):
+        # super().__init__()
+        Father.__init__(self)
+        Mather.__init__(self)
+        self.name = '김빈아'
 
     def greeting(self):
-        print('안녕하세요!')
- 
-class Doctor(Person):
+        super().__init__()
+        print(f'저는 {self.name}입니다.')
 
-    def greeting(self):
-        print('안녕하세요 어디가 아프신가요?')
+child = Child()
+print(child.__dict__)
 
-
-Joy = Doctor()
-Joy.greeting()      
+child.fatherName()
+child.matherName()
+child.greeting()
 
 ############################################################
 
