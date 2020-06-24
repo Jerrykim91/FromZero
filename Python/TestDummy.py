@@ -25,46 +25,75 @@
 
 # 33
 
+# from abc import *
+ 
+# class CookBase(metaclass=ABCMeta):
+#     """
+#     반드시 해야 하는 일을 추상메소드로 구현 
+#     """
+#     @abstractmethod
+#     def FindRecipe(self):
+#         pass
+ 
+#     @abstractmethod
+#     def Ingredients(self):
+#         pass
+ 
+# class Cook(CookBase):
+#     """
+#     구현할때 Base에서 구현한 item(@abstractmethod 추상메소드)은
+#     자식클래스에서 모두 구현 해야한다 - 아니면 에러발생 
+#     """
+#     def FindRecipe(self):
+#         print('요리 레시피 준비')
+ 
+#     def Ingredients(self):
+#         print('요리재료 준비')
+ 
+# james = Cook()
+# james.FindRecipe()
+# james.Ingredients()
+
 
 
 ############################################################
 
 # 32
 
-class Father:
+# class Father:
     
-    def __init__(self):
-        self.fname = '김우빈'
+#     def __init__(self):
+#         self.fname = '김우빈'
 
-    def fatherName(self):
-        print(f'아빠는 {self.fname} ,')
+#     def fatherName(self):
+#         print(f'아빠는 {self.fname} ,')
 
-class Mather:
+# class Mather:
 
-    def __init__(self):
-        self.mname = '신민아'
+#     def __init__(self):
+#         self.mname = '신민아'
 
-    def matherName(self):
-        print(f'엄마는 {self.mname} ,')
+#     def matherName(self):
+#         print(f'엄마는 {self.mname} ,')
 
-class Child(Father,Mather):
+# class Child(Father,Mather):
 
-    def __init__(self):
-        # super().__init__()
-        Father.__init__(self)
-        Mather.__init__(self)
-        self.name = '김빈아'
+#     def __init__(self):
+#         # super().__init__()
+#         Father.__init__(self)
+#         Mather.__init__(self)
+#         self.name = '김빈아'
 
-    def greeting(self):
-        super().__init__()
-        print(f'저는 {self.name}입니다.')
+#     def greeting(self):
+#         super().__init__()
+#         print(f'저는 {self.name}입니다.')
 
-child = Child()
-print(child.__dict__)
+# child = Child()
+# print(child.__dict__)
 
-child.fatherName()
-child.matherName()
-child.greeting()
+# child.fatherName()
+# child.matherName()
+# child.greeting()
 
 ############################################################
 
