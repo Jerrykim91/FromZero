@@ -23,6 +23,7 @@ class Character(metaclass = ABCMeta):
 # dev_mode 
 
 if __name__ == '__main__':
+    
     ch1 = Character()
 
 #  Character 클래스를 상속 받아서 Player, Monster 클래스를 각각 정의
