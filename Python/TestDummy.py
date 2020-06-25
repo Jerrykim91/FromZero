@@ -1,22 +1,128 @@
+def RandomNum(x):
+    
+    import random 
+    tmp = list(range(1,46))
+    random.shuffle(tmp)
+    # print('log1')
+    x = int(x)
+    cnt = 0
+    number = []
+    
+    for num in tmp:
+        cnt += 1 
+        # print('log2')
+        if cnt <= x : 
+            # print(num)
+            number.append(num)
+            pass
+
+    number = [num for num in tmp (cnt += 1 if cnt <= x)]
+    # print('Count : %s' % len(number), number)
+    # print('Count : %s' % len(number))
+    return number
+
+# rang = 1
+# print(rang < 100)
+
+############################################################
+
+# 361
+# def RandomNum(x):
+    
+#     import random 
+#     tmp = list(range(1,46))
+#     # try:
+        
+#     # except Exception as e :
+#     #     print('범위를 벗어났습니다 1 - 45 까지만 가능합니다.', e)
+
+#     random.shuffle(tmp)
+#     # print('log1')
+#     x = int(x)
+#     cnt = 0
+#     number = list()
+    
+#     for num in tmp:
+#         cnt += 1 
+#         # print('log2')
+#         if cnt <= x : 
+#             # print(num)
+#             number.append(num)
+#             pass
+
+#     # print('Count : %s' % len(number), number)
+#     # print('Count : %s' % len(number))
+#     return number
 
 
+# # print(findnum)
 
+# def Checker( rang=6 ):
 
+#     myLotto = [ i for i in map(int, input('1-45까지 6개의 숫자를 입력하세요 : ').split())]
+#     # print(myLotto)
+#     if len(myLotto) != rang:
+#         raise Exception(f'{len(myLotto)} 는 6 개') 
 
+#     elif len(set(myLotto))!= rang:
+#         raise Exception(f' 값이 중복 됩니다.')
+
+#     LottoWinningNumber = sorted(RandomNum(int(rang)))
+#     # print(findnum)
+#     c = 0
+#     dum = []
+#     for i in myLotto :
+
+#         if i in LottoWinningNumber:
+#             c += 1
+#             print(f"{c}개 맞았습니다.")
+
+#         else:
+#             dum.append(i)
+    
+#     print(f'{c}개 맞았습니다. {sorted(dum)} not in {LottoWinningNumber}') 
+        
+# try:
+#     Checker()
+
+# except Exception as e:                                 # 하위 코드 블록에서 예외가 발생해도 실행됨
+#     print('스크립트 파일에서 예외가 발생했습니다.', e)
 
 ############################################################
 
 # 36
 
+# # 올바른 값을 넣지 않으면 에러를 발생시키고 적당한 문구를 표시
+# def checker( list , index):
+
+#     if mine not in allowed:
+#         raise Exception('잘못된 값을 넣었습니다!') 
+#         print(mine)
+
+#     if yours not in allowed:   
+#         raise Exception('잘못된 값을 넣었습니다!') 
+#         print(yours)
+
+# try:
+#     rsp('가위', '바')  # 함수를 try문 안에 집어 넣음 
+
+# except Exception as e:                                 # 하위 코드 블록에서 예외가 발생해도 실행됨
+#     print('스크립트 파일에서 예외가 발생했습니다.', e)
 
 
 
-############################################################
+# def idx_print(list, index):
+# 	"""
+# 	list 와 index를 입력받아야함 
+# 	"""
+# 	try:
+# 		print(list.pop(index))
+# 	except IndexError:
+# 		print(f'{index} : index의 값을 가져올 수 없습니다.')
 
-# 36
-
-
-
+# idx_print([1,2,3], 1 )
+# idx_print([1,2,3], 10 )	  # index 길이 초과 
+# 						# -> 10 : index의 값을 가져올 수 없습니다.
 
 
 ############################################################
