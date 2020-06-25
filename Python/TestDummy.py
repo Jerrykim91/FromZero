@@ -3,23 +3,118 @@
 
 
 
+
 ############################################################
 
 # 36
 
 
 
+
+############################################################
+
+# 36
+
+
+
+
+
+############################################################
+
+# 38
+
+# # 190이 넘는 학생을 발견하면 반복을 종료
+# classRoom  = {'1반' : [150, 156, 179, 191, 199], '2반' : [150, 195, 179, 191, 199]}
+
+# try:
+#     for class_number, students in classRoom.items():
+#         for student in students:
+#             if student > 190:
+#                 print(class_number, '190을 넘는 학생이 있습니다.')
+#                 # break # 바로 상위 for문은 종료되지만 최고 상위 for문은 종료되지 않는다.
+#                 raise StopIteration
+#                 # 예외가 try 문 안에 있지 않으면 에러 발생시 프로그램이 멈춘다.
+# except StopIteration:
+#     print('정상종료')  
+
+############################################################
+
+# 37
+
+# # Try & Except
+# def index_print(list, index):
+
+#     try:
+#         print(list.pop(index))
+#     except IndexError:
+#         print('{} index의 값을 가져올 수 없습니다.'.format(index))
+
+# index_print([1,2,3], 5) # 5 index의 값을 가져올 수 없습니다.
+
+# # if 문
+# def index_print(list, index):
+#     if index < len(list):
+#         print(list.pop(index))
+#     else:
+#         print('{} index의 값을 가져올 수 없습니다.'.format(index))
+
+# index_print([1,2,3], 5) # 5 index의 값을 가져올 수 없습니다.
+
+
+############################################################
+
+# 36
+
+# y = [10, 20, 30]
+ 
+# try:
+#     index, x = map(int, input('인덱스와 나눌 숫자를 입력하세요 : ').split())
+#     print(y[index] / x)
+
+# # 숫자를 0으로 나눠서 에러가 발생했을 때 실행됨
+# except ZeroDivisionError as err :    
+#     print('숫자를 0으로 나눌 수 없습니다.', err)
+
+# # 범위를 벗어난 인덱스에 접근하여 에러가 발생했을 때 실행됨
+# except IndexError as err:           
+#     print('잘못된 인덱스입니다.', err)
+
+# except ValueError as err:           
+#     print('벗어난 범위 입니다.', err)
+
 ############################################################
 
 # 35
 
+# y = [10, 20, 30]
+ 
+# try:
+#     index, x = map(int, input('인덱스와 나눌 숫자를 입력하세요 : ').split())
+#     print(y[index] / x)
 
+# # 숫자를 0으로 나눠서 에러가 발생했을 때 실행됨
+# except ZeroDivisionError:    
+#     print('숫자를 0으로 나눌 수 없습니다.')
+
+# # 범위를 벗어난 인덱스에 접근하여 에러가 발생했을 때 실행됨
+# except IndexError:           
+#     print('잘못된 인덱스입니다.')
+
+# except ValueError:           
+#     print('벗어난 범위 입니다.')
 
 ############################################################
 
 # 34
 
 
+# try:
+#     num = int(input('숫자만!:'))
+#     print(f'{num}는 숫자입니다.')
+
+
+# except:    # 예외가 발생했을 때 실행됨
+#     print('숫자가 아닙니다.예외가 발생했습니다.')
 
 ############################################################
 
