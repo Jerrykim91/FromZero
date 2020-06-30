@@ -1,32 +1,65 @@
-def RandomNum(x):
-    
-    import random 
-    tmp = list(range(1,46))
-    random.shuffle(tmp)
-    # print('log1')
-    x = int(x)
-    cnt = 0
-    number = []
-    
-    for num in tmp:
-        cnt += 1 
-        # print('log2')
-        if cnt <= x : 
-            # print(num)
-            number.append(num)
-            pass
 
-    number = [num for num in tmp (cnt += 1 if cnt <= x)]
-    # print('Count : %s' % len(number), number)
-    # print('Count : %s' % len(number))
-    return number
 
-# rang = 1
+
+
+
+
+
+
+############################################################
+
+# 39
+
+
+# def hello():
+#     print('start')
+#     print('hello')
+#     print('end')
+ 
+# def world():
+#     print('start')
+#     print('world')
+#     print('end')
+ 
+# hello()
+# world()
+
+
+
+
+############################################################
+
+# 38
+
+# def RandomNum(x):
+    
+#     import random 
+#     tmp = list(range(1,46))
+#     random.shuffle(tmp)
+#     # print('log1')
+#     x = int(x)
+#     cnt = 0
+#     number = []
+    
+#     for num in tmp:
+#         cnt += 1 
+#         # print('log2')
+#         if cnt <= x : 
+#             # print(num)
+#             number.append(num)
+#             pass
+
+#     number = [num for num in tmp (cnt += 1 if cnt <= x)]
+#     # print('Count : %s' % len(number), number)
+#     # print('Count : %s' % len(number))
+#     return number
+
+# # rang = 1
 # print(rang < 100)
 
 ############################################################
 
-# 361
+# 37
 # def RandomNum(x):
     
 #     import random 
