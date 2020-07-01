@@ -1,6 +1,10 @@
 
 # 출처 : README.md 참조
 
+"""
+클래스 메소드의 사용법
+"""
+
 class Employee(object):
 
     raiseAmount = 1.1  # 연봉인상률 클래스 변수 

@@ -1,6 +1,11 @@
 
 # 출처 : README.md 참조
 
+"""
+클래스 메소드의 사용법
+# 주민등록번호를 인자로 받아 인스턴스를 생성
+"""
+
 class Person(object):
 
     def __init__(self, year, month, day, sex):

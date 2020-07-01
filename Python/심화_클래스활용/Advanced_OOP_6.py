@@ -1,6 +1,11 @@
 
 # 출처 : README.md 참조
 
+"""
+클래스 메소드의 사용법 +
+# 리턴하는 기능을 가진 스태틱 메소드
+"""
+
 class Person(object):
 
 #    my_class_var = 'sanghee'

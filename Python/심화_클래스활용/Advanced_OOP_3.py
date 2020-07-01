@@ -1,6 +1,10 @@
 
 # 출처 : README.md 참조
 
+"""
+인스턴스 생성자(constructor)와 같은 용도로 사용
+"""
+
 class Person(object):
 
     def __init__(self, year, month, day, sex):
