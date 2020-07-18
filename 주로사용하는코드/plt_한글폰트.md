@@ -1,6 +1,6 @@
 <br>
 
-#### 1. 분석_판다스 - 그래프 한글 폰트 설정
+#### 1. 그래프_판다스 - 그래프 한글 폰트 설정
 
 <br>
 
@@ -9,6 +9,8 @@
 <br>
 
 ## 1. platform을 이용한 폰트 설정 
+
+데이터 먼저 로드하고 해보삼
 
 <br>
 
@@ -31,3 +33,45 @@ plt.rc('font', family=font_name)
 ```
 
 <br>
+
+## 2.
+
+<br>
+
+```py
+
+```
+
+<br>
+
+
+## 3.
+
+<br>
+
+```py
+
+```
+
+<br>
+
+
+
+
+
+<br>
+
+---
+
+<br>
+
+## Reference <br>
+
+- name &nbsp; : &nbsp;<https://> <br>
+
+<br>
+<br>
+
+## Practice makes perfect! <br>
+
+- [내용](주소)
