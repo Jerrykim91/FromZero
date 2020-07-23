@@ -66,11 +66,15 @@ plt.show()
 
 
 
-## 2.
+## 2. 프린트 
+
 
 <br>
 
 ```py
+
+fig = plt.figure(figsize=(20,12))
+fig.savefig('클라우드.png')
 
 ```
 
