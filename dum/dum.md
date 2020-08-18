@@ -1,5 +1,17 @@
 
 
+# pythonforeverybody - Michigan 대학 Charles Severance 교수님
+
+
+파이썬은 웹 서비스, 데이터 분석, 머신러닝에서 강세를 보이며 널리 쓰이는 언어로, 쉽지만 강력한 언어
+
+
+
+
+---
+
+
+
 # 해외 부트캠프
 
 - 코세라 
