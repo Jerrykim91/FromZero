@@ -1,4 +1,19 @@
+# SQL
 
+SQL은 Structured Query Language의 약자
+
+관게형 데이터 베이스 관리 시스템(RDBMS)의 데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어 
+
+기본적인 구조
+
+SELECT 컬럼이름
+FROM  테이블 이름 
+WHERE 조건
+GROUP BY 그룹화할 컬럼
+HAVING 그룹화한 후의 조건
+LIMIT 제한 할 개수
+
+---
 
 # pythonforeverybody - Michigan 대학 Charles Severance 교수님
 
