@@ -88,6 +88,9 @@ t[-c(1)]
 
 
 
+
+############################################################################################
+
 #### 1차 실습 
 
 ran_num <- c(1:30)
@@ -160,7 +163,7 @@ while(i<10){
 
 ### 
 
-#### 실습 2(
+#### 실습 2
 
 ### 1. 2~9단까지 구구단을 외자 ! 
 
@@ -227,7 +230,6 @@ func(3, 100)
 
 
 ### 3-2 . 다시해보기 
-
 multipsum <- function(x,n){
   start <- 1:n
   return(cat("1부터",n,"까지의 수 중에서",x,"의 배수 합은",
@@ -237,6 +239,11 @@ multipsum <- function(x,n){
 multipsum(3,100) 
 
 
+#각 나라country의 기대 수명lifeExp
+gapminder %>% filter(country == country[1] & year >1990 )%>%select(country,lifeExp,pop)
+
+
+### 실습 3
 
 install.packages("gapminder")
 install.packages("dplyr")
@@ -244,19 +251,16 @@ library(gapminder)
 library(dplyr)
 glimpse(gapminder)
 
-#각 나라country의 기대 수명lifeExp
 table(gapminder$country)
 summary(gapminder$country)
 
-filter(gapminder, continent == "Asia")
-gapminder$country[grep("Korea", gapminder$country)]
 grep("Korea", gapminder$country, value=T)
+gapminder$country[grep("Korea", gapminder$country)]
 
-grep("^K", gapminder$country, value=T)
-
-gapminder %>% filter(country == "Korea, Dem. Rep." & year >1990 )%>%select(lifeExp,pop)
+# 문제 1. [gapminder 연습] 우리나라의 1990년도 이후의 기대 수명과 인구 추출
+gapminder[gapminder$country == "Korea, Rep."&gapminder$year>1990,c("lifeExp","pop")]
 gapminder %>% filter(country == "Korea, Rep." & year >1990 )%>%select(lifeExp,pop)
 
-
-gapminder %>% filter(country == country[1] & year >1990 )%>%select(country,lifeExp,pop)
-
+# 문제 2.[gapminder 연습] 북한의 1990년도 이후의 기대 수명과 인구 추출
+gapminder[gapminder$country == "Korea, Dem. Rep."&gapminder$year>1990,c("lifeExp","pop")] 
+gapminder %>% filter(country == "Korea, Dem. Rep." & year >1990 )%>%select(lifeExp,pop)

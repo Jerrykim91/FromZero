@@ -40,7 +40,7 @@ hist(height,breaks=1000,probability=T)  #breaks는 막대개수,probability는 �
 
 #======================p121
 #t검정
-score1 <-read.csv("c:/r/tdata.csv", header=T, stringsAsFactors=T)
+score1 <-read.csv("c:/data/tdata.csv", header=T, stringsAsFactors=T)
 score1
 
 # 정규분포를 따르는지 확인
@@ -55,7 +55,7 @@ result
 
 
 #======================p123
-score1 <-read.csv("c:/r/tdata2.csv", header=T, stringsAsFactors=T)
+score1 <-read.csv("c:/data/tdata2.csv", header=T, stringsAsFactors=T)
 score1
 
 # 정규분포를 따르는지 확인
@@ -90,7 +90,7 @@ t.test(x,y,paired = TRUE)
 
 
 #======================p128
-# 분산분석(oneway.test)
+# 분산분석(oneway.test) -> 집단이 3개일때 분석하는 방법 
 x <- c(1.09, 2.12, 2.92, 4.06, 4.90)
 y <- c(1,2,3,4,5)
 z <- c(1.10, 1.96, 12.98, 4.09, 4.92)
@@ -103,6 +103,17 @@ mydata
 group <-c(rep(1,5), rep(2,5), rep(3,5))  #처음 5개를 1로, 다음 5개를 2, 다음 5개를 3
 group
 oneway.test(mydata~group, var=T)  # mydata를 3개로 그룹지어서 평균이 같은지 검증
+
+### 정규분포를 검사
+### 정규분포 결과 해석 ##
+### 귀무가설 - 평균이 같다.
+### 대립가설 - 평균이 같지 않다. 
+#### oneway.test
+### 결과 해석 -> 유의확률이 p = 0.5> 0.05 이므로 귀무가설 채택 
+
+
+
+
 
 
 #======================p129
@@ -124,7 +135,7 @@ oneway.test(mydata~group, var=T)
 
 #======================p132
 # 빈도분석
-fruits1 <- read.csv("c:/r/love_fruits.csv",header=T)
+fruits1 <- read.csv("c:/data/love_fruits.csv",header=T)
 head(fruits1)
 
 prop.table(table(fruits1$선호과일)) 
@@ -173,7 +184,7 @@ abline(line, col="blue")
 
 #======================p146
 #단순회귀분석
-score <- read.csv("c:/r/score.txt",header=T,sep=",")
+score <- read.csv("c:/data/score.txt",header=T,sep=",")
 attach(score)
 score
 
@@ -249,7 +260,7 @@ library(klaR)
 
 #======================= p172
 
-state <- read.csv("C:/r/state.csv")
+state <- read.csv("C:/data/state.csv")
 
 # population 평균, 절사평균, 중간값 
 mean(state[["Population"]])
@@ -333,7 +344,7 @@ hist(x, breaks=breaks1)
 
 #======================= p184
 ### 막대그래프
-dfw <- read.csv("c:/r/dfw_airline.csv")
+dfw <- read.csv("c:/data/dfw_airline.csv")
 barplot(dfw)
 barplot(as.matrix(dfw))
 
@@ -347,8 +358,8 @@ barplot(as.matrix(dfw)/6, ylim=c(0,20000), cex.axis = 0.8, cex.names = 0.7)
 #======================= p188
 ### chapter 2.7
 #데이터 준비
-sp500_px <- read.csv("c:/r/sp500_0.csv")
-sp500_sym <- read.csv("c:/r/sp500_sym.csv", stringsAsFactors = FALSE)
+sp500_px <- read.csv("c:/data/sp500_0.csv")
+sp500_sym <- read.csv("c:/data/sp500_sym.csv", stringsAsFactors = FALSE)
 
 
 telecom <- sp500_px[, sp500_sym[sp500_sym$sector=="telecommunications_services", 'symbol']]
@@ -391,7 +402,7 @@ cor(telecom$T, telecom$VZ)
 #======================= p199
 ### chapter3.3
 #데이터 준비
-loans_income <- read.csv("c:/r/loans_income.csv")[,1]
+loans_income <- read.csv("c:/data/loans_income.csv")[,1]
 
 # 단순랜덤표본
 samp_data <- data.frame(income=sample(loans_income, 1000), 
@@ -455,7 +466,7 @@ ggplot(income, aes(x=income)) +
 
 # boot패키지의 boot() 함수를 이용한 부트스트랩 
 library(boot)
-loans_income <- read.csv("c:/r/loans_income.csv")[,1]
+loans_income <- read.csv("c:/data/loans_income.csv")[,1]
 
 summary(loans_income)
 
@@ -621,7 +632,7 @@ t.test(data3, alternative = c("greater"))
 
 # A 페이지에 사용자가 머무르는 시간이 B 페이지보다 유의미하게 작은 지 검정   
 
-session_times <- read.csv("c:/r/web_page_data.csv")
+session_times <- read.csv("c:/data/web_page_data.csv")
 head(session_times)
 
 t.test(Time ~ Page, data=session_times, alternative='less' )
@@ -630,7 +641,7 @@ t.test(Time ~ Page, data=session_times, alternative='less' )
 
 #======================= p229
 ### chapter 4.7 분산분석
-four_sessions  <- read.csv("c:/r/four_sessions.csv")
+four_sessions  <- read.csv("c:/data/four_sessions.csv")
 summary(aov(Time ~ Page, data=four_sessions))
 
 oneway.test(four_sessions$Time ~ four_sessions$Page, var=T) 
@@ -638,7 +649,7 @@ oneway.test(four_sessions$Time ~ four_sessions$Page, var=T)
 
 #======================= p232
 ### chapter 4.9 카이제곱검정
-click_rate <-  read.csv("c:/r/click_rates.csv")
+click_rate <-  read.csv("c:/data/click_rates.csv")
 clicks <- matrix(click_rate$Rate, nrow=3, ncol=2, byrow=TRUE)
 
 head(clicks)
@@ -747,7 +758,7 @@ barplot(t(data_mtx), beside=TRUE, legend=TRUE,
 
 ### chapter 5.1 단순선형회귀
 
-lung <- read.csv("c:/r/LungDisease.csv")
+lung <- read.csv("c:/data/LungDisease.csv")
 
 # 면진에 대한 노출 연수와 폐할량 산전도 그래프  
 head(lung)
@@ -836,7 +847,7 @@ head(resid)
 install.packages(c("car", "modelr", "scatterplot3d"))
 
 # 대학생 92명의 키와 몸무게 데이터 읽기 
-std90 <- read.table("c:/r/student90.csv", sep = ",", 
+std90 <- read.table("c:/data/student90.csv", sep = ",", 
                     stringsAsFactors = FALSE, 
                     header = TRUE, 
                     na.strings = "")
@@ -1002,7 +1013,7 @@ mae(m_b, std90) # mean absolute error(평균절대오차)
 
 ### chapter 4.2 다중선형회귀
 # 킹카운티 주택 정보 예제 
-house <- read.csv(("c:/r/house_sales.csv"), sep='\t')
+house <- read.csv(("c:/data/house_sales.csv"), sep='\t')
 head(house)
 head(house[, c("AdjSalePrice", "SqFtTotLiving", "SqFtLot", "Bathrooms", 
                "Bedrooms", "BldgGrade")])
