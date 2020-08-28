@@ -650,13 +650,14 @@ oneway.test(four_sessions$Time ~ four_sessions$Page, var=T)
 #======================= p232
 ### chapter 4.9 카이제곱검정
 click_rate <-  read.csv("c:/data/click_rates.csv")
-clicks <- matrix(click_rate$Rate, nrow=3, ncol=2, byrow=TRUE)
-
+click_rate
+clicks <- matrix(click_rate$Rate, nrow=3, ncol=2, byrow=TRUE);clicks
+dimnames(clicks) = list(c("A", "B", "C"),c("click", "No-click"))
 head(clicks)
-chisq.test(clicks, simulate.p.value=TRUE)
+# chisq.test(clicks, simulate.p.value=TRUE)
 
 
-# S======================= 참고 p28-44
+#======================= 참고 p28-44
 
 #======================= p239
 # 카이제곱검정 - 적합도 검정 
