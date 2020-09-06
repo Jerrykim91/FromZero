@@ -40,7 +40,7 @@ UseFor
 ### 변수의 데이터형을 모두 참으로 출력하라
 x <- 1
 is.integer(x) # numeric # 정수취급이 안된다.
-
+# is.numeric(x) 
 ### 데이터 형 변환을 해보자 
 x <- as.integer(x) # 데이터 형변환 
 x
