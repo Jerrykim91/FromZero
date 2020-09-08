@@ -343,6 +343,7 @@ listPatients
 listPatients$patients		# 요소명 입력
 
 listPatients[[1]]				# 인덱스 입력
+listPatients[[2]]				# 인덱스 입력
 
 listPatients[["patients"]]			# 요소명을""에 입력
 

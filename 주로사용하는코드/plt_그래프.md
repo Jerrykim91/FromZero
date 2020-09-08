@@ -18,7 +18,7 @@
 import matplotlib.pyplot as plt
 
 # 라벨
-labels = ('A', 'B', 'C') -> plt.legend(['A','B','C'])
+labels = ('A', 'B', 'C') #-> plt.legend(['A','B','C'])
 data = [50, 30, 40] 
 
 plt.figure(figsize=(6, 6))
