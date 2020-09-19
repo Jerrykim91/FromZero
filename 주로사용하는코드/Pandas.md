@@ -19,6 +19,10 @@
 path = './data/COVID_19/%s.csv' 
 df = pd.read_csv(path %'PatientInfo')
 
+
+path = 'C:/data/'
+glob.glob(path+'*')
+
 ```
 
 <br>
