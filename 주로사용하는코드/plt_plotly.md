@@ -129,13 +129,27 @@ fig.show()
 
 
 
-## 3.
+## 3. 웹으로 그래프 보이기 
 
 <br>
 
 ```py
 
+import plotly.graph_objects as go # or plotly.express as px
+fig = go.Figure() # or any Plotly Express function e.g. px.bar(...)
+# fig.add_trace( ... )
+# fig.update_layout( ... )
 
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
+
+app = dash.Dash()
+app.layout = html.Div([
+    dcc.Graph(figure=fig)
+])
+
+app.run_server(debug=True, use_reloader=False)  # Turn off reloader if inside Jupyter
 
 ```
 
@@ -155,8 +169,8 @@ fig.show()
 
 ## Reference <br>
 
-- name &nbsp; : &nbsp;<https://> <br>
-
+- Plotly 참고자료_지구과학, GIS, 그리고 원격탐사 블로그입니다.ㅍ &nbsp; : &nbsp;<http://blog.daum.net/geoscience/1420> <br>
+- Plotly 참고자료_하나씩 점을 찍어 나가며 &nbsp; : &nbsp;<https://dailyheumsi.tistory.com/118> <br>
 <br>
 <br>
 
