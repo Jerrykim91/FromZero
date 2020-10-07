@@ -1,9 +1,10 @@
 
-<br>
-
-# 청년 인턴쉽 스터디 노트
+##### JUST DO IT RIGHT NOW
 
 <br>
-<br>
 
-## 그냥 정리 안된 노트 - ... 한게 없음... 휴
+- Just Note
+
+<br><br>
+
+
