@@ -1,9 +1,10 @@
+# Python_Study
 
 ##### JUST DO IT RIGHT NOW
 
 <br>
 
-- Just Note
+- Python
 
 <br><br>
 
